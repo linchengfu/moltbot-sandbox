@@ -189,7 +189,7 @@ if (process.env.CF_AI_GATEWAY_MODEL) {
     const accountId = process.env.CF_AI_GATEWAY_ACCOUNT_ID;
     const gatewayId = process.env.CF_AI_GATEWAY_GATEWAY_ID;
     const apiKey = process.env.CLOUDFLARE_AI_GATEWAY_API_KEY;
-    console.log(888, accountId, gatewayId, gwProvider, modelId)
+    console.log(88899, accountId, gatewayId, gwProvider, modelId)
     let baseUrl;
     if (accountId && gatewayId) {
         baseUrl = 'https://gateway.ai.cloudflare.com/v1/' + accountId + '/' + gatewayId + '/' + gwProvider;
