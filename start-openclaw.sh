@@ -189,7 +189,7 @@ if (process.env.CF_AI_GATEWAY_MODEL) {
     const accountId = process.env.CF_AI_GATEWAY_ACCOUNT_ID;
     const gatewayId = process.env.CF_AI_GATEWAY_GATEWAY_ID;
     const apiKey = process.env.CLOUDFLARE_AI_GATEWAY_API_KEY;
-
+    console.log(888, accountId, gatewayId, gwProvider, modelId)
     let baseUrl;
     if (accountId && gatewayId) {
         baseUrl = 'https://gateway.ai.cloudflare.com/v1/' + accountId + '/' + gatewayId + '/' + gwProvider;
@@ -210,6 +210,7 @@ if (process.env.CF_AI_GATEWAY_MODEL) {
             api: api,
             models: [{ id: modelId, name: modelId, contextWindow: 131072, maxTokens: 8192 }],
         };
+        console.log(999, config.models)
         config.agents = config.agents || {};
         config.agents.defaults = config.agents.defaults || {};
         config.agents.defaults.model = { primary: providerName + '/' + modelId };
